@@ -11,7 +11,9 @@ namespace SpinningDiscs
 
             cd.SpinDisc();
             dvd.SpinDisc();
-
+                  /*Breakpoints added at line 13 and 18. 
+                   Execution will stop after running dvd.SpinDisc()
+                  and then after printng cd.WriteData(275)*/
             cd.ReadData();
             dvd.ReadData();
 

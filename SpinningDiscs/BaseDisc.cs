@@ -6,6 +6,7 @@ namespace SpinningDiscs
     public abstract class BaseDisc
     {
         public string Name { get; set; }
+    /*Name does change*/
         public int StorageCapacity { get; set; }
         public int RemainingCapacity { get; set; }
         public int CapacityUsed { get; set; }
@@ -43,6 +44,9 @@ namespace SpinningDiscs
             string output = "Disk name: " + Name + "\nMax Capacity: " + StorageCapacity + "\nSpace Used: " + CapacityUsed + "\nAvailable Space: " + RemainingCapacity;
             return output;
         }
+        /*Breakpoint added to line 44, program will not output anything when called as the defining line is a breakpoint and output is not defined.
+            SpinningDiscs.dll!SpinningDiscs.Program.Main(string[] args) Line 23	C#
+        */
 
         public string WriteData(int size)
         {
@@ -57,3 +61,5 @@ namespace SpinningDiscs
         }
     }
 }
+/*When would you use the Call Stack pane? If you run the app and it is already functioning, what shows up there?
+The call stack shows the execution path, in reverse chronological order, that brought the code to that breakpoint. */
